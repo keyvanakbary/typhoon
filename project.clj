@@ -11,11 +11,22 @@
   :source-paths ["src"]
 
   :cljsbuild {
-    :builds [{:id "dev"
-              :source-paths ["src"]
-              :compiler {
-                :preamble ["reagent/react.js"]
-                :output-to "typhoon.js"
-                :output-dir "out"
-                :optimizations :none
-                :source-map true}}]})
+              :builds [{:id "dev"
+                        :source-paths ["src"]
+                        :compiler {
+                                   :preamble ["reagent/react.js"]
+                                   :output-to "build/dev.js"
+                                   :output-dir "build/dev"
+                                   :optimizations :none
+                                   :source-map true}}
+                       {:id "prod"
+                        :source-paths ["src"]
+                        :compiler {:optimizations :advanced
+                                   :warning-level :verbose
+                                   :pretty-print false
+                                   :output-to "build/prod.js"
+                                   :output-dir "build/prod"
+                                   :preamble ["reagent/react.js"]
+                                   :externs ["react/externs/react.js"]
+                                   :closure-warnings {:externs-validation :off
+                                                      :non-standard-jsdoc :off}}}]})
