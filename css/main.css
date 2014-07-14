@@ -1,0 +1,143 @@
+/*
+#2d2d2d Background
+#393939 Current Line
+#515151 Selection
+#cccccc Foreground
+#999999 Comment
+#f2777a Red
+#f99157 Orange
+#ffcc66 Yellow
+#99cc99 Green
+#66cccc Aqua
+#6699cc Blue
+#cc99cc Purple
+*/
+body {
+  background: #2d2d2d;
+  font-family: 'Open Sans', Arial, serif;
+  color: #cccccc;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+header {
+  text-align: right;
+}
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu li {
+  display: inline-block;
+}
+.menu .button {
+  display: inline-block;
+  text-decoration: none;
+}
+header, section {
+  margin-top: 1em;
+}
+.remaining {
+  background: #393939;
+}
+.container {
+  width: 80%;
+  text-align: left;
+  margin: 0 auto;
+}
+.stats {
+  text-align: right;
+}
+.text {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.paragraph {
+  color: #999999;
+  margin: 0;
+  padding: 0;
+}
+.completed {
+  color: #cccccc;
+}
+.current {
+  color: #99cc99;
+}
+.challenge {
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  margin-top: 1em;
+}
+.error {
+  color: #f2777a !important;
+}
+.button {
+  background: #6699cc;
+  color: #2d2d2d;
+  cursor: pointer;
+}
+.button:hover {
+  background: #66cccc;
+}
+.challenge .button,
+.input {
+  font-size: 2em;
+}
+button {
+  border: none;
+}
+.input {
+  font-family: 'Open Sans', Arial, serif;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #99cc99;
+  border-bottom: 2px solid #999999;
+}
+::-webkit-input-placeholder {
+  color: #515151;
+}
+:-moz-placeholder {
+  color: #515151;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #515151;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #515151;
+}
+.input:focus{
+  outline: 0;
+}
+.dot {
+  font-family: monospace;
+}
+.dot:before {
+  content: "·";
+  position: relative;
+  width: 0;
+  display: inline-block;
+  z-index: -1;
+  opacity: 0.2;
+}
+::selection {
+  background: #ffb7b7;
+}
+::-moz-selection {
+  background: #ffb7b7;
+}
+.dotted {
+  position: relative;
+  z-index: 1;
+}
+em {
+  color: #999999;
+}
+.wpm {
+  color: #cccccc;
+}
