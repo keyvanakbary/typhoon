@@ -13,11 +13,11 @@
   :cljsbuild {
               :builds [{:id "dev"
                         :source-paths ["src"]
-                        :compiler {
-                                   :preamble ["reagent/react.js"]
+                        :compiler {:optimizations :none
+                                   :pretty-print true
                                    :output-to "build/dev.js"
                                    :output-dir "build/dev"
-                                   :optimizations :none
+                                   :preamble ["reagent/react.js"]
                                    :source-map true}}
                        {:id "prod"
                         :source-paths ["src"]
@@ -26,7 +26,7 @@
                                    :pretty-print false
                                    :output-to "build/prod.js"
                                    :output-dir "build/prod"
-                                   :preamble ["reagent/react.js"]
+                                   :preamble ["reagent/react.min.js"]
                                    :externs ["react/externs/react.js"]
                                    :closure-warnings {:externs-validation :off
                                                       :non-standard-jsdoc :off}}}]})
