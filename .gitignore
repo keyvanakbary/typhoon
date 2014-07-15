@@ -1,6 +1,8 @@
 pom.xml
 *jar
-/build/
+dev.js
+/build/dev/
+/build/prod/
 /lib/
 /classes/
 /out/
