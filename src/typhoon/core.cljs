@@ -116,11 +116,14 @@
    (text @state)
    (challenge @state)])
 
-(defn mountit []
-  (reagent/render-component [app] (by-id "game")))
+(defn init []
+  (reagent/render-component [app] (by-id "game"))
+  (js/setInterval #(swap! state assoc :timer (now)) 1000)
+  (new-challenge! chal))
 
-(mountit)
-(js/setInterval #(swap! state assoc :timer (now)) 1000)
+(defn on [el event fn]
+  (.addEventListener el (name event) fn))
 
-(new-challenge! chal)
+(on (by-id "start") :click init)
+
 

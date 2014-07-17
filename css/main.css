@@ -12,21 +12,33 @@
 #6699cc Blue
 #cc99cc Purple
 */
+sup {
+  color: #ffcc66;
+  font-size: 0.5em;
+}
 body {
   background: #2d2d2d;
-  font-family: 'Open Sans', Arial, serif;
+  font-family: 'Roboto', Arial, serif;
   color: #cccccc;
-  margin: 0;
-  padding: 0;
   text-align: center;
   font-size: 1.5em;
+}
+p, ul, h1, body {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-weight: normal;
+  font-size: 2.5em;
+  text-align: center;
+}
+.description {
+  font-size: 0.7em;
 }
 header {
   text-align: right;
 }
 .menu {
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 .menu li {
@@ -36,7 +48,7 @@ header {
   display: inline-block;
   text-decoration: none;
 }
-header, section {
+article, header, section {
   margin-top: 1em;
 }
 .remaining {
@@ -46,6 +58,7 @@ header, section {
   width: 80%;
   text-align: left;
   margin: 0 auto;
+  max-width: 1024px;
 }
 .stats {
   text-align: right;
@@ -88,14 +101,15 @@ header, section {
 }
 button {
   border: none;
+  font-family: inherit;
 }
 .input {
-  font-family: 'Open Sans', Arial, serif;
+  font-family: inherit;
   width: 100%;
   background: transparent;
   border: none;
   color: #99cc99;
-  border-bottom: 2px solid #999999;
+  border-bottom: 1px solid #999999;
 }
 ::-webkit-input-placeholder {
   color: #515151;
